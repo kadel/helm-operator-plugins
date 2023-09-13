@@ -76,7 +76,7 @@ func DependentPredicateFuncs() crtpredicate.Funcs {
 			if reflect.DeepEqual(old.Object, new.Object) {
 				return false
 			}
-			log.V(1).Info("Reconciling due to dependent resource update", "name", new.GetName(), "namespace", new.GetNamespace(), "apiVersion", new.GroupVersionKind().GroupVersion(), "kind", new.GroupVersionKind().Kind)
+			log.V(1).Info("!!!!Reconciling due to dependent resource update", "name", new.GetName(), "namespace", new.GetNamespace(), "apiVersion", new.GroupVersionKind().GroupVersion(), "kind", new.GroupVersionKind().Kind)
 			return true
 		},
 	}
